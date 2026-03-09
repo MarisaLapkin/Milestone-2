@@ -81,6 +81,52 @@ def percent_students_oncampus(schools:list[Housing_Data], name:str, year:int)->f
 
 #write yours here
 
+#Given a csu and a year, returns the percentage of total local population that are students
+def student_percentage(school: list[Housing_Data], campus: str, year:int)-> float:
+    for idx in school:
+        if idx.school == campus:
+            if year == 2021:
+                student_population = idx.students['Student Population 2021']
+            elif year == 2022:
+                student_population = idx.students['Student Population 2022']
+            elif year == 2023:
+                student_population = idx.students['Student Population 2023']
+            else:
+                return "Year Must Be Between 2021 and 2023"
+
+            total_population = idx.population['City Population']
+            return (round(student_population / total_population, 4)) * 100, "%"
+
+    return "School Name Not Found"
+
+def homeless_percentage(school: list[Housing_Data], campus:str):
+    for idx in school:
+        if idx.school == campus:
+            total_population = idx.population['City Population']
+            homeless_population = idx.homeless["Homeless Population"]
+            return round(homeless_population / total_population, 4) * 100
+
+def csu_homelessness(school: list[Housing_Data], percentage: float)->str:
+    new_list = []
+    for idx in school:
+        percent = homeless_percentage(school, idx.school)
+        if percent >= percentage:
+            new_list.append(idx.school)
+
+    return f"The universities that have a higher percentage of homeless than {percentage}% include {new_list}"
 
 
+def csu_lowest_housing_price(school: list[Housing_Data])->str:
+    if not school:
+        raise ValueError("School list is empty")
 
+    lowest_school = school[0].school
+    lowest_price = school[0].averages['Average Rent Per Month']
+
+    for idx in school:
+        price = idx.averages['Average Rent Per Month']
+        if price < lowest_price:
+            lowest_price = price
+            lowest_school = idx.school
+
+    return f"The school with the lowest average rent is {lowest_school} at ${lowest_price} per month"
