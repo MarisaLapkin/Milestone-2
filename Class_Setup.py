@@ -1,6 +1,6 @@
 #Class Setup
 
-class Housing_Data:
+class Housing_Data: #Marisa
     def __init__ (self,
                   school:str,
                   population:dict,
@@ -15,8 +15,8 @@ class Housing_Data:
         self.averages = averages
         self.homeless = homeless
 
-    def __repr__(self)->str:
-        return "Housing_Data({},{},{},{},{},{})".format(
+    def __repr__(self)->str: #Marisa
+        return "Housing_Data(School:{},{},{},{},{},{})".format(
             self.school,
             self.population,
             self.students,
@@ -25,7 +25,7 @@ class Housing_Data:
             self.homeless)
 
 
-    def __equal__(self,other)->bool:
+    def __equal__(self,other)->bool: #Marisa
         return ((self == other) or
                 (type(self)==type(other) and
                  self.school==other.school and

@@ -2,7 +2,7 @@ from Class_Setup import Housing_Data
 #Object Creations
 
 Central_Cal_Data = [
-    Housing_Data(
+    Housing_Data( #Marisa
         'Cal Poly San Luis Obispo',
         {'City Population': 49729},
         {'Student Population 2021':22231,
@@ -12,7 +12,7 @@ Central_Cal_Data = [
         {'Average Rent Per Month':1944,
          'Average Apartment Size': 604},
         {'Homeless Population':1483}),
-Housing_Data(
+Housing_Data( #Marisa
     'San Jose State',
     {'City Population':997368},
         {'Student Population 2021':37133,
@@ -22,7 +22,8 @@ Housing_Data(
         {'Average Rent Per Month':2695,
          'Average Apartment Size': 704},
         {'Homeless Population':9706}),
-Housing_Data('San Fransisco State',
+Housing_Data(#Marisa
+    'San Fransisco State',
     {'City Population':827526},
         {'Student Population 2021':24463,
         'Student Population 2022':25046,
@@ -31,7 +32,8 @@ Housing_Data('San Fransisco State',
         {'Average Rent Per Month':3240,
          'Average Apartment Size': 579},
         {'Homeless Population':8035}),
-Housing_Data('CSU Monterey Bay',
+Housing_Data(#Marisa
+    'CSU Monterey Bay',
     {'City Population':29015},
         {'Student Population 2021':7503,
         'Student Population 2022':7045,
@@ -40,7 +42,8 @@ Housing_Data('CSU Monterey Bay',
         {'Average Rent Per Month':2191,
          'Average Apartment Size': 615},
         {'Homeless Population':2704}),
-Housing_Data('CSU Bakersfield',
+Housing_Data(# Marisa
+    'CSU Bakersfield',
     {'City Population':417468},
         {'Student Population 2021':10972,
         'Student Population 2022':9613,
@@ -49,7 +52,8 @@ Housing_Data('CSU Bakersfield',
         {'Average Rent Per Month':1222,
          'Average Apartment Size': 641},
         {'Homeless Population':1330}),
-Housing_Data('Fresno State',
+Housing_Data(# Martin
+    'Fresno State',
     {'City Population':550105},
         {'Student Population 2021':25047,
         'Student Population 2022':23999,
@@ -67,7 +71,8 @@ Housing_Data('CSU Stanislaus',
         {'Average Rent Per Month':1412,
          'Average Apartment Size': 628},
         {'Homeless Population':1923}),
-Housing_Data('CSU East Bay',
+Housing_Data(#Martin
+    'CSU East Bay',
     {'City Population':158440},
         {'Student Population 2021':15189,
         'Student Population 2022':13673,
@@ -76,7 +81,8 @@ Housing_Data('CSU East Bay',
         {'Average Rent Per Month':1742,
          'Average Apartment Size': 655},
         {'Homeless Population':1151}),
-Housing_Data('Cal Poly Maritime',
+Housing_Data(#Martin
+    'Cal Poly Maritime',
     {'City Population':123475},
         {'Student Population 2021':925,
         'Student Population 2022':849,
@@ -85,7 +91,8 @@ Housing_Data('Cal Poly Maritime',
         {'Average Rent Per Month':2084,
          'Average Apartment Size': 669},
         {'Homeless Population':6312}),
-Housing_Data('Sonoma State',
+Housing_Data(#Martin
+    'Sonoma State',
     {'City Population':44894},
         {'Student Population 2021':7371,
         'Student Population 2022':6637,
@@ -94,7 +101,8 @@ Housing_Data('Sonoma State',
         {'Average Rent Per Month':2079,
          'Average Apartment Size': 669},
         {'Homeless Population':2951}),
-Housing_Data('Sacramento State',
+Housing_Data(#Martin
+    'Sacramento State',
     {'City Population':535798},
         {'Student Population 2021':32498,
         'Student Population 2022':31818,
@@ -103,5 +111,4 @@ Housing_Data('Sacramento State',
         {'Average Rent Per Month':1563,
          'Average Apartment Size': 662},
         {'Homeless Population':5561}),
-#Housing_Data(),  #add the last 6 here
 ]
