@@ -107,13 +107,15 @@ def student_percentage(school: list[Housing_Data], campus: str, year:int)-> floa
             elif year == 2023:
                 student_population = idx.students['Student Population 2023']
             else:
-                return "Year Must Be Between 2021 and 2023"
+                print( "Year Must Be Between 2021 and 2023")
+                return -1
 
             total_population = idx.population['City Population']
-            return (round(student_population / total_population, 4)) * 100, "%"
+            return (round(student_population / total_population, 4)) * 100
 
-    return "School Name Not Found"
-
+    print ("School Name Not Found")
+    return -1
+#Given a campus name returns the percentage of homelessness in the area relative tot he surrounding city population
 def homeless_percentage(school: list[Housing_Data], campus:str):#Martin
     for idx in school:
         if idx.school == campus:
@@ -121,6 +123,7 @@ def homeless_percentage(school: list[Housing_Data], campus:str):#Martin
             homeless_population = idx.homeless["Homeless Population"]
             return round(homeless_population / total_population, 4) * 100
 
+#Given a homelessness percentage, returns a list of CSUs above/below the threshold
 def csu_homelessness(school: list[Housing_Data], percentage: float)->str:#Martin
     new_list = []
     for idx in school:
@@ -130,7 +133,7 @@ def csu_homelessness(school: list[Housing_Data], percentage: float)->str:#Martin
 
     return f"The universities that have a higher percentage of homeless than {percentage}% include {new_list}"
 
-
+#Returns name of csu that has lowest housing prices
 def csu_lowest_housing_price(school: list[Housing_Data])->str:#Martin
     if not school:
         raise ValueError("School list is empty")

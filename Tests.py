@@ -67,7 +67,7 @@ class MyTestCase(unittest.TestCase):
         input2 = "Cal Poly San Luis Obispo"
         input3 = 2022
         result = main.student_percentage(input1, input2, input3)
-        expected = 44.24, "%"
+        expected = 44.24
         self.assertEqual(result, expected)
 
     def test_homesless_percentage_1(self):#Martin
